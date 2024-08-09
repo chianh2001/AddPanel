@@ -1,0 +1,56 @@
+﻿<Window x:Class="AddPanel.WPF_Create"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AddPanel"
+        mc:Ignorable="d"
+        Title="Beam and Column Settings" Height="475" Width="300"
+        ResizeMode="NoResize"
+        WindowStyle="SingleBorderWindow" 
+        Icon="/AddPanel;component/Resources/settings_ico.png"
+        WindowStartupLocation="CenterScreen"
+        >
+
+    <Grid>
+        <!-- Beam Settings -->
+        <GroupBox Header="Beam Settings" Margin="10,10,10,200">
+            <StackPanel>
+                <TextBlock Text="Reference Plane"/>
+                <ComboBox Name="cbReferencePlane"/>
+
+                <TextBlock Text="Z Offset Value"/>
+                <TextBox Name="tbZOffset"/>
+
+                <TextBlock Text="Beam Type"/>
+                <ComboBox Name="cbBeamType"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- Column Settings -->
+        <GroupBox Header="Column Settings" Margin="10,160,10,10">
+            <StackPanel>
+                <TextBlock Text="Top Level"/>
+                <ComboBox Name="cbTopLevel"/>
+
+                <TextBlock Text="Top Offset"/>
+                <TextBox Name="tbTopOffset"/>
+
+                <TextBlock Text="Base Level"/>
+                <ComboBox Name="cbBaseLevel"/>
+
+                <TextBlock Text="Base Offset"/>
+                <TextBox Name="tbBaseOffset"/>
+
+                <TextBlock Text="Column Type"/>
+                <ComboBox Name="cbColumnType"/>
+            </StackPanel>
+        </GroupBox>
+
+        <!-- OK and Cancel Buttons -->
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="10 370 10 20">
+            <Button x:Name="btnOK" Content="OK" Width="75" Height="20" Click="BtnOK_Click"/>
+            <Button x:Name="btnCancel" Content="Cancel" Width="75" Height="20" Margin="5" Click="BtnCancel_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
